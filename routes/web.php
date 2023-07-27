@@ -21,11 +21,15 @@ Route::get('/', function () {
 
 Route::controller(NewsController::class)->prefix('admin')->middleware('auth')->name('news.')->group(function(){
     Route::get('news/create', 'add')->name('add');
+    Route::post('news/create', 'create')->name('create');
 });
 
-Route::controller(SelfProfileController::class)->prefix('admin')->middleware('auth')->name('create.')->group(function(){
-    Route::get('profile/create', 'add')->name('create');
+Route::controller(SelfProfileController::class)->prefix('admin')->middleware('auth')->name('profile.')->group(function(){
+    Route::get('profile/create', 'add')->name('add');
     Route::get('profile/edit', 'edit')->name('edit');
+    Route::post('profile/create', 'create')->name('create');
+    Route::post('profile/edit', 'update')->name('update');
+
 });
 
 Route::get('/dashboard', function () {
