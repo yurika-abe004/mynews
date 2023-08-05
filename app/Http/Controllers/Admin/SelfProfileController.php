@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ProfileRequest;
 use Illuminate\Http\Request;
 
 class SelfProfileController extends Controller
@@ -13,7 +14,7 @@ class SelfProfileController extends Controller
         return view('admin.profile.create');
     }
 
-    public function create()
+    public function create(ProfileRequest $request)
     {
         return redirect('admin/profile/create');
     }
@@ -23,7 +24,7 @@ class SelfProfileController extends Controller
         return view('admin.profile.edit');
     }
 
-    public function update()
+    public function update(ProfileRequest $request)
     {
         return redirect('admin/profile/edit');
     }
