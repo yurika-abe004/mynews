@@ -10,7 +10,9 @@ class News extends Model
     use HasFactory;
 
     protected $guarded = array('id');
-    protected $rules = ['title' , 'body' ];
-
+    public static $rules = [
+        'title' => 'required' , 
+        'body' => 'required' ,
+    ];
+    
 }
-

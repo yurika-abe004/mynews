@@ -9,7 +9,7 @@ class ProfileRequest extends FormRequest
     /**
      * Determine if the user is authorized to make this request.
      */
-    public function authorize(): bool
+    public function authorize()
     {
         return true;
     }
@@ -19,7 +19,7 @@ class ProfileRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
      */
-    public function rules(): array
+    public function rules()
     {
         return [
             'name' => 'required',

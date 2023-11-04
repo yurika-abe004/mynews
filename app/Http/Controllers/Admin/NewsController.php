@@ -24,7 +24,7 @@ class NewsController extends Controller
         $form = $request->all();
 
         // formに画像があれば、保存する
-        if ($form['image']) {
+        if (isset($form['images'])) {
             $path = $request->file('image')->store('public/image');
             $news->image_path = basename($path);
         } else {

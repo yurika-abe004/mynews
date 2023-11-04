@@ -30,6 +30,7 @@ Route::controller(SelfProfileController::class)->prefix('admin')->middleware('au
     Route::get('profile/edit', 'edit')->name('edit');
     Route::post('profile/create', 'create')->name('create');
     Route::post('profile/edit', 'update')->name('update');
+    Route::get('profile', 'index')->name('index');
 
 });
 
