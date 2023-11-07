@@ -36,7 +36,7 @@ class SelfProfileController extends Controller
         $profile->fill($form);
         $profile->save();
 
-        return redirect('admin/profile/create');
+        return redirect('admin/profile');
     }
 
 // 以下を追記
@@ -50,7 +50,7 @@ public function index(Request $request)
         // それ以外はすべてのニュースを取得する
         $posts = Profile::all();
     }
-    return view('admin.profile.index', ['posts' => $posts, 'cond_title' => $cond_title]);
+    return view('admin.profile.index', compact('posts' , 'cond_title'));
 }
 
 

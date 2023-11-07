@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('title', 'プロフィールの一覧)
+@section('title', 'プロフィールの一覧')
 
 @section('content')
     <div class="container">
